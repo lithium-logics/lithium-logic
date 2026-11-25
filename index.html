@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lithium Logic · Apps and Websites</title>
+<meta name="description" content="Lithium Logic builds apps and websites. Code that’s light, fast, and keeps things running.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Lithium Logic · Apps and Websites">
+<meta property="og:description" content="Code that’s light, fast, and keeps things running.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Lithium Logic home">
+      <span class="tile" aria-hidden="true"><small>3</small>Li<i>6.94</i></span>
+      <span>Lithium Logic</span>
+    </a>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="themeBtn" aria-label="Switch between dark and light mode">
+        <svg class="ico moon" data-i="moon"></svg><svg class="ico sun" data-i="sun"></svg>
+      </button>
+      <button class="icon-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg class="ico" data-i="menu"></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="pill mono"><i class="dot"></i>Apps · Websites · Tools</p>
+      <h1>Lithium Logic</h1><p class="tagline">Code that’s light, fast, and keeps things running.</p>
+      <p class="lead">I build apps and websites for people and businesses that want something clean, quick and reliable.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">View my work</a>
+        <a class="btn ghost" href="https://github.com/lithium-logics" target="_blank" rel="noopener"><svg class="ico" data-i="github"></svg>GitHub</a>
+      </div>
+    </div>
+    <!-- Lithium atom: 2 electrons in the inner shell (1s²), 1 in the outer (2s¹) -->
+    <svg class="atom" viewBox="0 0 400 400" role="img" aria-label="Animated lithium atom with three electrons orbiting a nucleus">
+      <circle cx="200" cy="200" r="70" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+      <circle cx="200" cy="200" r="130" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 6"/>
+      <ellipse cx="200" cy="200" rx="185" ry="70" fill="none" stroke="var(--line)" stroke-width="1" transform="rotate(-30 200 200)"/>
+      <g class="orb"><circle cx="270" cy="200" r="7" fill="var(--accent)"/><circle cx="130" cy="200" r="7" fill="var(--accent)"/></g>
+      <g class="orb o2"><circle cx="330" cy="200" r="8" fill="var(--accent)"/></g>
+      <g class="orb o3"><circle cx="200" cy="15" r="4" fill="var(--muted)"/></g>
+      <circle cx="200" cy="200" r="44" fill="var(--accent)"/>
+      <text x="200" y="214" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="40" fill="var(--on-accent)">Li</text>
+      <text x="200" y="344" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="13" fill="var(--muted)">1s² 2s¹</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><h2>About me</h2></div>
+    <div class="about">
+      <div class="reveal">
+        <p>I’m Ashik Hasan, a self-driven developer who builds apps and websites under the name Lithium Logic. I like turning an idea into something people can open, tap and use.</p>
+        <p>I’ve always loved chemistry, and that’s where the name comes from. Lithium is light, and it powers batteries, so my goal is to write code that’s light, fast and keeps things running.</p>
+        <p data-ph>[Add one or two sentences about your background, location or what you enjoy building most.]</p>
+        <div class="li-card">Li · Z = 3 · 6.94 u<br>1s² 2s¹ · the lightest metal</div>
+      </div>
+      <div class="facts reveal" id="facts"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><h2>Projects</h2><p>Each project gets an element-style code. Select a card to read more.</p></div>
+    <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><h2>Skills</h2><p>Levels are placeholders. Edit the numbers in the SKILLS list in the script.</p></div>
+    <div class="skills" id="skillGrid"></div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><h2>Services</h2><p>What I can build for you.</p></div>
+    <div class="services" id="svcGrid"></div>
+    <ol class="process" aria-label="How a project works"><li><b>Talk</b><span>We discuss your goal, audience and timeline.</span></li><li><b>Design</b><span>I sketch the layout, colors and flow.</span></li><li><b>Build</b><span>I code it light, fast and responsive.</span></li><li><b>Launch</b><span>We go live and check that everything works.</span></li></ol>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section id="journey">
+  <div class="wrap">
+    <div class="sec-head"><h2>Journey</h2><p>Learning and milestones along the way.</p></div>
+    <ol class="timeline" id="timeline"></ol>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><h2>Contact</h2><p>Have a project in mind? Reach out through any of these.</p></div>
+    <div class="contact">
+      <div class="links" id="links"></div>
+      <form id="form" novalidate>
+        <label>Name<input id="fn" name="name" autocomplete="name" required></label>
+        <label>Email<input id="fe" name="email" type="email" autocomplete="email" required></label>
+        <label>Message<textarea id="fm" name="message" required></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+        <p id="formMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Ashik · Lithium Logic</span>
+    <div class="social">
+      <a class="icon-btn" href="https://github.com/lithium-logics" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico" data-i="github"></svg></a>
+      <a class="icon-btn" href="https://www.facebook.com/lithium.logic" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico" data-i="facebook"></svg></a>
+    </div>
+    <span class="mono">Li · 3 · 6.94 u</span>
+  </div>
+</footer>
+
+<button class="icon-btn totop" id="toTop" aria-label="Back to top"><svg class="ico" data-i="up"></svg></button>
+
+<!-- ===== PROJECT MODAL ===== -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle" tabindex="-1" id="dialog"></div>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
